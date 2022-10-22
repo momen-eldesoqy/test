@@ -19,7 +19,7 @@
                     <a href="#" class="logo">
                         <img src="Assets/Logo.png" alt="logo">
                     </a>
-                    <ul>
+                    <ul class="hide-on-mob">
                         <li><a href="#">الدورات</a></li>
                         <li><a href="#">المجتمع</a></li>
                         <li><a href="#">المدونة</a></li>
@@ -28,10 +28,21 @@
                     </ul>
                 </div>
                 <div class="btns">
-                    <button>الدخول</button>
+                    <button class="hide-on-mob">الدخول</button>
+                    <button id="dropBtn" class="show-on-mob"><i class="fa-solid fa-bars"></i></button>
                 </div>
+                
             </div>
+            <ul id="dropDown" class="drop-down">
+                <li><a href="#">الدورات</a></li>
+                <li><a href="#">المجتمع</a></li>
+                <li><a href="#">المدونة</a></li>
+                <li><a href="#">الدورات</a></li>
+                <li><a href="#">الوظائف</a></li>
+                <li><a href="#">الدخول</a></li>
+            </ul>
         </div>
+
         <div class="header">
             <div class="overlay"></div>
             <div class="container">
@@ -196,5 +207,12 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('dropBtn').onclick = function(){
+            document.getElementById('dropDown').classList.toggle('active')
+        }
+        
+    </script>
 </body>
 </html>

@@ -17,7 +17,6 @@ body{
     background-color: #F5F7FB;
 }
 .container{
-    max-width: 1040px;
     margin: auto;
 }
 .nav-cont{
@@ -37,7 +36,7 @@ body{
 }
 .nav .logo img{
     width: 50px;
-    box-shadow: 0 0 12px hsl(207deg 14% 71%);
+    box-shadow: 0 0 20px hsl(207 , 29% , 65% );
     border-radius: 10px;
     padding: 5px;
 }
@@ -95,6 +94,7 @@ body{
 .header .content .btns button {
     margin: 0 8px;
     padding: 8px 35px;
+    margin-bottom: 5px;
 }
 .header .content button:first-child{
     background-color: #37535E;
@@ -102,6 +102,28 @@ body{
 .header .content button:last-child{
     background-color: #F5F7FB;
     color: #37535E;
+}
+.drop-down{
+    list-style: none;
+    text-align: center;
+    position: relative;
+    height: 0;
+    transition: .5s;
+}
+
+.drop-down li {
+    margin: 10px 0;
+    
+}
+.drop-down li:hover{
+    background-color: #18A1FF;
+}
+.drop-down li:hover a{
+    color: #fff;
+}
+.drop-down a{
+    color: #37535E;
+    text-decoration: none;
 }
 
 .team{
@@ -113,13 +135,14 @@ body{
 .team .team-group{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     margin: 20px 5px;
     flex-wrap: wrap;
     
 }
 .team .team-group .team-member .card{
     border-radius: 10px;
-    box-shadow: 0 0 12px hsl(207deg 14% 71%);
+    box-shadow: 0 0 20px hsl(207 , 29% , 65% );
     color: #37535E;
     margin-bottom: 20px;
 }
@@ -133,14 +156,14 @@ body{
 .team .team-group .team-member .card .card-body ul {
     list-style: none;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: .8rem;
 }
 .team .team-group .team-member .card .card-body h4{
     margin: 0;
     padding: 0;
 }
 .team .team-group .team-member .card .card-body .name {
-    font-size: 11px;
+    font-size: .7rem;
 }
 .team .team-group .team-member .card .card-body .name .fa-star{
     color: #ebd32d;
@@ -148,23 +171,64 @@ body{
 .fa-circle-check{
     color: #2fb558;
 }
+.show-on-mob{
+    display: none;
+}
 /* start  responsive  */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1400px){
     .container{
-        width: 95%;
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media screen and (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        max-width: 540px;
         margin: auto;
     }
-    .nav ul{
+    .hide-on-mob{
         display: none;
+    }
+    .show-on-mob{
+        display: block;
+    }
+    .drop-down.active{
+        height: 250px;
     }
     .header .content{
         
         font-size: 15px;
     }
-    .team-member{
-        width: 80%;
-        margin: auto;
+    .team .team-group{
+        justify-content: space-around;
+    }
+    .team .team-group .team-member .card .card-body ul,
+    .team .team-group .team-member .card .card-body .name{
+        font-size: 1rem;
+    }
+    
+
+}
+@media screen and (max-width:576px){
+    .container{
+       width: 95%;
     }
 
+    .team .team-group{
+        display: block;
+     }
+     .header .content .btns button{
+        padding: 8px 15px;
+     }
 }
