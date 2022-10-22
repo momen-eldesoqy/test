@@ -1,0 +1,170 @@
+/*
+Primary Color: #18A1FF
+Background Color: #F5F7FB
+Text Color: #37535E
+Shadow Settings: 0 0 20px hsl(207, 29, 65, 25%)
+Border Radius: 10px-20px
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    
+}
+body{
+    background-color: #F5F7FB;
+}
+.container{
+    max-width: 1040px;
+    margin: auto;
+}
+.nav-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav .logo{
+    margin-left: 30px;
+}
+.nav .logo img{
+    width: 50px;
+    box-shadow: 0 0 12px hsl(207deg 14% 71%);
+    border-radius: 10px;
+    padding: 5px;
+}
+.nav ul {
+    list-style: none;
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #37535E;
+}
+
+.btns button{
+    outline: none;
+    background: none;
+    background-color: #18A1FF;
+    border: none;
+    padding: 8px 20px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header
+{
+    background-image: url('Assets/BG.png');
+    background-size: cover;
+    min-height: 500px;
+    background-position: center;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #37535e8f;
+    
+}
+.header .content {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 25px;
+}
+.header .content .btns{
+    margin-top: 20px;
+}
+.header .content .btns button {
+    margin: 0 8px;
+    padding: 8px 35px;
+}
+.header .content button:first-child{
+    background-color: #37535E;
+}
+.header .content button:last-child{
+    background-color: #F5F7FB;
+    color: #37535E;
+}
+
+.team{
+    margin: 20px 0;
+}
+.team h3{
+    color: #37535E;
+}
+.team .team-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 5px;
+    flex-wrap: wrap;
+    
+}
+.team .team-group .team-member .card{
+    border-radius: 10px;
+    box-shadow: 0 0 12px hsl(207deg 14% 71%);
+    color: #37535E;
+    margin-bottom: 20px;
+}
+.team .team-group .team-member .card .card-header img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.team .team-group .team-member .card .card-body{
+    padding: 10px;
+}
+.team .team-group .team-member .card .card-body ul {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.team .team-group .team-member .card .card-body h4{
+    margin: 0;
+    padding: 0;
+}
+.team .team-group .team-member .card .card-body .name {
+    font-size: 11px;
+}
+.team .team-group .team-member .card .card-body .name .fa-star{
+    color: #ebd32d;
+}
+.fa-circle-check{
+    color: #2fb558;
+}
+/* start  responsive  */
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 95%;
+        margin: auto;
+    }
+    .nav ul{
+        display: none;
+    }
+    .header .content{
+        
+        font-size: 15px;
+    }
+    .team-member{
+        width: 80%;
+        margin: auto;
+    }
+
+}
